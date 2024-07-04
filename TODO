@@ -1,0 +1,8 @@
+1 - Need integration library: postgres, django-ckeditor, modeltranslater, multylanguage
+2 - Create models: About, Experiments, Project and need rows modeltranslater use
+3 - Create views
+4 - all template changes
+5 - submodain
+6 - all another project
+7 - all telegram bot add
+8 - deploy server
