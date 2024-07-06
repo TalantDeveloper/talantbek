@@ -236,8 +236,8 @@
         var s = a(5893), r = a(7294), n = a(9008), l = a.n(n);
 
         function i(e) {
-            let {title: t, pathname: a} = e, n = "Brittany Chiang",
-                i = "Brittany Chiang is a software engineer who builds accessible, inclusive products and digital experiences for the web.",
+            let {title: t, pathname: a} = e, n = "Talantbek Developer",
+                i = "Talantbek Developer is a software engineer who builds accessible, inclusive products and digital experiences for the web.",
                 o = "https://brittanychiang.com", c = "".concat(o, "/og.png"), d = "@bchiang7", m = n;
             return t !== n && (m = "".concat(t, " | ").concat(n)), (0, s.jsxs)(l(), {
                 children: [(0, s.jsx)("title", {children: m}), (0, s.jsx)("meta", {
@@ -583,7 +583,7 @@
                 children: [(0, s.jsxs)("div", {
                     children: [(0, s.jsx)("h1", {
                         className: "text-4xl font-bold tracking-tight text-slate-200 sm:text-5xl",
-                        children: (0, s.jsx)(h(), {href: "/", children: "Brittany Chiang"})
+                        children: (0, s.jsx)(h(), {href: "/", children: "Talantbek Developer"})
                     }), (0, s.jsx)("h2", {
                         className: "mt-3 text-lg font-medium tracking-tight text-slate-200 sm:text-xl",
                         children: "Senior Frontend Engineer"
@@ -959,7 +959,7 @@
                 className: "lg:flex lg:justify-between lg:gap-4",
                 children: [(0, s.jsx)(v.Z, {
                     pathname: "/",
-                    title: "Brittany Chiang"
+                    title: "Talantbek Developer"
                 }), (0, s.jsx)(u, {sections: t}), (0, s.jsxs)("main", {
                     id: "content",
                     className: "pt-24 lg:w-1/2 lg:py-24",

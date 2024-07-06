@@ -246,7 +246,7 @@ img, video {
     --tw-backdrop-invert: ;
     --tw-backdrop-opacity: ;
     --tw-backdrop-saturate: ;
-    --tw-backdrop-sepia:
+    --tw-backdrop-sepia: ;
 }
 
 ::backdrop {
@@ -296,7 +296,7 @@ img, video {
     --tw-backdrop-invert: ;
     --tw-backdrop-opacity: ;
     --tw-backdrop-saturate: ;
-    --tw-backdrop-sepia:
+    --tw-backdrop-sepia: ;
 }
 
 .container {
@@ -1899,13 +1899,13 @@ img, video {
 
 @font-face {
     font-family: __inter_20b187;
-    src: url(/_next/static/media/730e8169368baf37-s.p.woff2) format("woff2");
+    src: url(/static/media/120.woff2) format("woff2");
     font-display: swap
 }
 
 @font-face {
     font-family: __inter_20b187;
-    src: url(/_next/static/media/f1f0c35b32161446-s.p.woff2) format("woff2");
+    src: url(/static/media/121.woff2) format("woff2");
     font-display: swap;
     font-weight: 400;
     font-style: normal
@@ -1913,7 +1913,7 @@ img, video {
 
 @font-face {
     font-family: __inter_20b187;
-    src: url(/_next/static/media/d593a8df799d4ab1-s.p.woff2) format("woff2");
+    src: url(/static/media/122.woff2) format("woff2");
     font-display: swap;
     font-weight: 400;
     font-style: italic
@@ -1921,7 +1921,7 @@ img, video {
 
 @font-face {
     font-family: __inter_20b187;
-    src: url(/_next/static/media/dc792b508e6f91c7-s.p.woff2) format("woff2");
+    src: url(/static/media/123.woff2) format("woff2");
     font-display: swap;
     font-weight: 500;
     font-style: normal
@@ -1929,7 +1929,7 @@ img, video {
 
 @font-face {
     font-family: __inter_20b187;
-    src: url(/_next/static/media/84d3493a9fd22f1c-s.p.woff2) format("woff2");
+    src: url(/static/media/124.woff2) format("woff2");
     font-display: swap;
     font-weight: 500;
     font-style: italic
@@ -1937,7 +1937,7 @@ img, video {
 
 @font-face {
     font-family: __inter_20b187;
-    src: url(/_next/static/media/fcb100c7607696fd-s.p.woff2) format("woff2");
+    src: url(/static/media/125.woff2) format("woff2");
     font-display: swap;
     font-weight: 600;
     font-style: normal
@@ -1945,7 +1945,7 @@ img, video {
 
 @font-face {
     font-family: __inter_20b187;
-    src: url(/_next/static/media/d90f295d0c348006-s.p.woff2) format("woff2");
+    src: url(/static/media/126.woff2) format("woff2");
     font-display: swap;
     font-weight: 600;
     font-style: italic
@@ -1953,7 +1953,7 @@ img, video {
 
 @font-face {
     font-family: __inter_20b187;
-    src: url(/_next/static/media/579e0f95cacfae57-s.p.woff2) format("woff2");
+    src: url(/static/media/127.woff2) format("woff2");
     font-display: swap;
     font-weight: 700;
     font-style: normal
@@ -1961,7 +1961,7 @@ img, video {
 
 @font-face {
     font-family: __inter_20b187;
-    src: url(/_next/static/media/828a494e04a45cbd-s.p.woff2) format("woff2");
+    src: url(/static/media/128.woff2) format("woff2");
     font-display: swap;
     font-weight: 700;
     font-style: italic
