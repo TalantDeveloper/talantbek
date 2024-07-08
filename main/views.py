@@ -1,8 +1,8 @@
 from django.shortcuts import render
-from .models import About, Language
+from .models import About
 
 
 def welcome(request):
-    experience = About.objects.all()
-    context = {'experiences': experience}
-    return render(request, 'base.html')
+    about = About.objects.all()
+    context = {'about': about[0]}
+    return render(request, 'base.html', context)
