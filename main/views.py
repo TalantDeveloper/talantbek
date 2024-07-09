@@ -1,8 +1,14 @@
 from django.shortcuts import render
-from .models import About
+from .models import About, Experience, Project, Program
 
 
 def welcome(request):
     about = About.objects.all()
-    context = {'about': about[0]}
+    experience = Experience.objects.all()
+    project = Project.objects.all()
+    context = {
+        'about': about[0],
+        'experiences': experience,
+        'projects': project,
+    }
     return render(request, 'base.html', context)

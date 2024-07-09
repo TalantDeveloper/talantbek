@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 """
 import os
 from pathlib import Path
+from django.utils.translation import gettext_lazy as _
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -138,11 +139,28 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/5.0/topics/i18n/
 
-LANGUAGE_CODE = 'en'
+LANGUAGE_CODE = 'en-us'
+
+LANGUAGES = [
+    ('en', _('English')),
+    ('uz', _("O'zbek")),
+    ('ru', _("Russian"))
+]
+
+LOCALE_PATHS = [
+    os.path.join(BASE_DIR, 'locale'),
+]
+
+MODELTRANSLATION_DEFAULT_LANGUAGE = 'en'
+
+MODELTRANSLATION_LANGUAGES = ('en', 'uz', 'ru')
+
 
 TIME_ZONE = 'Asia/Tashkent'
 
 USE_I18N = True
+
+USE_L10N = True
 
 USE_TZ = True
 
@@ -162,16 +180,3 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
-LANGUAGES = (
-    ('en', 'English'),
-    ('uz', "O'zbek"),
-    ('ru', "Russian")
-)
-
-LOCALE_PATHS = [
-    BASE_DIR / 'locale/',
-]
-
-MODELTRANSLATION_DEFAULT_LANGUAGE = 'en'
-
-MODELTRANSLATION_LANGUAGES = ('en', 'uz', 'ru')

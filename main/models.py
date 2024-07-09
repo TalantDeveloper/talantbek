@@ -26,3 +26,15 @@ class Experience(models.Model):
 
     def __str__(self):
         return self.name
+
+
+class Project(models.Model):
+    name = models.CharField(max_length=200)
+    image = models.ImageField(upload_to='images/', null=True, blank=True)
+    url = models.URLField(verbose_name='url', null=True, blank=True)
+    content = RichTextUploadingField(verbose_name='content')
+
+    def __str__(self):
+        return self.name
+
+

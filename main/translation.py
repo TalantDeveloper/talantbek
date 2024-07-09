@@ -1,4 +1,4 @@
-from .models import About, Experience
+from .models import About, Experience, Project
 from modeltranslation.translator import TranslationOptions, register
 
 
@@ -11,4 +11,8 @@ class AboutTranslationOptions(TranslationOptions):
 class ExperienceTranslationOptions(TranslationOptions):
     fields = ('name', 'position', 'date', 'content')
 
+
+@register(Project)
+class ProjectTranslationOptions(TranslationOptions):
+    fields = ('name', 'content')
 
