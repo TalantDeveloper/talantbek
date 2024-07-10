@@ -1,0 +1,90 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-07-09 18:37+0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+#: .\talantbek\settings.py:145
+msgid "English"
+msgstr ""
+
+#: .\talantbek\settings.py:146
+msgid "O'zbek"
+msgstr ""
+
+#: .\talantbek\settings.py:147
+msgid "Russian"
+msgstr ""
+
+#: .\templates\base.html:98
+msgid "Botirjon Ergashov"
+msgstr ""
+
+#: .\templates\base.html:102
+msgid "Middle Backend Engineer"
+msgstr ""
+
+#: .\templates\base.html:105
+msgid "I build pixel-perfect, engaging, and accessible digital experiences."
+msgstr ""
+
+#: .\templates\base.html:115 .\templates\base.html:230
+msgid "About"
+msgstr ""
+
+#: .\templates\base.html:125 .\templates\base.html:241
+msgid "Experience"
+msgstr ""
+
+#: .\templates\base.html:135 .\templates\base.html:324
+msgid "Projects"
+msgstr ""
+
+#: .\templates\base.html:148
+msgid "GitHub"
+msgstr ""
+
+#: .\templates\base.html:160
+msgid "LinkedIn"
+msgstr ""
+
+#: .\templates\base.html:173
+msgid "CodePen"
+msgstr ""
+
+#: .\templates\base.html:188
+msgid "Instagram"
+msgstr ""
+
+#: .\templates\base.html:201
+msgid "Twitter"
+msgstr ""
+
+#: .\templates\base.html:215
+msgid "Telegram"
+msgstr ""
+
+#: .\templates\base.html:304
+msgid "View Full Resume"
+msgstr ""
+
+#: .\templates\base.html:375
+msgid "View Full Project"
+msgstr ""
+
+#: .\templates\base.html:380
+msgid "Archive"
+msgstr ""
