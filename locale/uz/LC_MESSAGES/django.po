@@ -19,23 +19,23 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 #: .\talantbek\settings.py:145
 msgid "English"
-msgstr ""
+msgstr "Ingliz"
 
 #: .\talantbek\settings.py:146
 msgid "O'zbek"
-msgstr ""
+msgstr "O'zbek"
 
 #: .\talantbek\settings.py:147
 msgid "Russian"
-msgstr ""
+msgstr "Rus tili"
 
 #: .\templates\base.html:98
 msgid "Botirjon Ergashov"
-msgstr ""
+msgstr "Botirjon Ergashov"
 
 #: .\templates\base.html:102
 msgid "Middle Backend Engineer"
-msgstr ""
+msgstr "Middle Backend Engineer"
 
 #: .\templates\base.html:105
 msgid "I build pixel-perfect, engaging, and accessible digital experiences."
@@ -43,47 +43,47 @@ msgstr ""
 
 #: .\templates\base.html:115 .\templates\base.html:230
 msgid "About"
-msgstr ""
+msgstr "About"
 
 #: .\templates\base.html:125 .\templates\base.html:241
 msgid "Experience"
-msgstr ""
+msgstr "Experience"
 
 #: .\templates\base.html:135 .\templates\base.html:324
 msgid "Projects"
-msgstr ""
+msgstr "Projects"
 
 #: .\templates\base.html:148
 msgid "GitHub"
-msgstr ""
+msgstr "GitHub"
 
 #: .\templates\base.html:160
 msgid "LinkedIn"
-msgstr ""
+msgstr "LinkedIn"
 
 #: .\templates\base.html:173
 msgid "CodePen"
-msgstr ""
+msgstr "CodePen"
 
 #: .\templates\base.html:188
 msgid "Instagram"
-msgstr ""
+msgstr "Instagram"
 
 #: .\templates\base.html:201
 msgid "Twitter"
-msgstr ""
+msgstr "Twitter"
 
 #: .\templates\base.html:215
 msgid "Telegram"
-msgstr ""
+msgstr "Telegram"
 
 #: .\templates\base.html:304
 msgid "View Full Resume"
-msgstr ""
+msgstr "To'liq rezyumeni ko'rish"
 
 #: .\templates\base.html:375
 msgid "View Full Project"
-msgstr ""
+msgstr "Toʻliq loyihani koʻrish"
 
 #: .\templates\base.html:380
 msgid "Archive"

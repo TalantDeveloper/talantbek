@@ -46,48 +46,48 @@ msgstr ""
 
 #: .\templates\base.html:115 .\templates\base.html:230
 msgid "About"
-msgstr ""
+msgstr "О"
 
 #: .\templates\base.html:125 .\templates\base.html:241
 msgid "Experience"
-msgstr ""
+msgstr "Опыт"
 
 #: .\templates\base.html:135 .\templates\base.html:324
 msgid "Projects"
-msgstr ""
+msgstr "Проекты"
 
 #: .\templates\base.html:148
 msgid "GitHub"
-msgstr ""
+msgstr "GitHub"
 
 #: .\templates\base.html:160
 msgid "LinkedIn"
-msgstr ""
+msgstr "LinkedIn"
 
 #: .\templates\base.html:173
 msgid "CodePen"
-msgstr ""
+msgstr "CodePen"
 
 #: .\templates\base.html:188
 msgid "Instagram"
-msgstr ""
+msgstr "Инстаграм"
 
 #: .\templates\base.html:201
 msgid "Twitter"
-msgstr ""
+msgstr "Твиттер"
 
 #: .\templates\base.html:215
 msgid "Telegram"
-msgstr ""
+msgstr "Телеграмма"
 
 #: .\templates\base.html:304
 msgid "View Full Resume"
-msgstr ""
+msgstr "Посмотреть полное резюме"
 
 #: .\templates\base.html:375
 msgid "View Full Project"
-msgstr ""
+msgstr "Посмотреть полный проект"
 
 #: .\templates\base.html:380
 msgid "Archive"
-msgstr ""
+msgstr "Архив"
