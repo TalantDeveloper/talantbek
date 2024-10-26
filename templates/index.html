@@ -1,0 +1,74 @@
+<!doctype html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="{% static 'css/stylesheet.css' %}">
+    <title>Talantbek</title>
+</head>
+<body>
+<!-- Navbar section start -->
+<nav class="navbar">
+    <a href="#" class="logo">Portfolio.</a>
+    <ul>
+        <li class="active"><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Portfolio</a></li>
+        <li><a href="#">Service</a></li>
+        <li><a href="#">Projects</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+</nav>
+<!-- Navbar section end -->
+
+<div class="bars-animation">
+    <div class="bar" style="--i:6;"></div>
+    <div class="bar" style="--i:5;"></div>
+    <div class="bar" style="--i:4;"></div>
+    <div class="bar" style="--i:3;"></div>
+    <div class="bar" style="--i:2;"></div>
+    <div class="bar" style="--i:1;"></div>
+</div>
+
+<section class="home">
+    <div class="home-info">
+        <h1>Ergashov Botirjon</h1>
+        <h2>I'm a
+            <span style="--i:4" data-text="Backend Developer">Backend Developer</span>
+            <span style="--i:3" data-text="Python Develper">Python Develper</span>
+            <span style="--i:2" data-text="Middle Developer">Middle Developer</span>
+            <span style="--i:1" data-text="Full Developer">Full Developer</span>
+        </h2>
+        <p>
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+            industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+            scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into
+            electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of
+            Letraset
+        </p>
+        <div class="btn-sci">
+            <a href="#" class="btn">Download CV</a>
+            <div class="sci">
+                <a href="#"><i class='bx bxl-github'></i></a>
+                <a href="#"><i class='bx bxl-linkedin'></i></a>
+                <a href="#"><i class='bx bxl-twitter'></i></a>
+                <a href="#"><i class='bx bxl-instagram'></i></a>
+                <a href="#"><i class='bx bxl-telegram'></i></a>
+            </div>
+        </div>
+    </div>
+    <div class="home-img">
+        <div class="img-box">
+            <div class="img-item">
+                <img src="{% static 'img/images.png' %}" alt="">
+            </div>
+        </div>
+    </div>
+</section>
+
+</body>
+</html>
