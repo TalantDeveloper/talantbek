@@ -1,0 +1,49 @@
+<!doctype html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/123.css' %}">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+</head>
+<body>
+
+<div class="wrapper">
+    <div class="cover cover-left"></div>
+    <div class="cover cover-right turn"></div>
+
+    <div class="book">
+        <div class="book-page page-left">
+            <div class="profile-page">
+                <img src="{% static 'img/images.png' %}" alt="">
+                <h1>Botirjon Ergashov</h1>
+                <h3>Backend Developer</h3>
+
+                <div class="social-media">
+                    <a href="" class=""><i class='bx bxl-github'></i></a>
+                    <a href="" class=""><i class='bx bxl-linkedin'></i></a>
+                    <a href="" class=""><i class='bx bxl-twitter'></i></a>
+                    <a href="" class=""><i class='bx bxl-instagram'></i></a>
+                    <a href="" class=""><i class='bx bxl-telegram'></i></a>
+                </div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate delectus dignissimos ea illum
+                     mollitia nihil perspiciatis quo
+                    ratione tenetur veritatis?</p>
+                <div class="btn-box">
+                    <a href="#" class="btn">Downolad CV</a>
+                    <a href="#" class="btn contact-me">Contact Me</a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="{% static 'js/frontent.js' %}"></script>
+</body>
+</html>
