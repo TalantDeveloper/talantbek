@@ -1,0 +1,105 @@
+<!doctype html>
+{% load static %}
+{% load i18n %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="{% static 'style/style.css' %}">
+    <title>{% trans "TalantDev | Backend Programmer" %}</title>
+</head>
+<body>
+
+<header class="active">
+    <a href="{% url 'main:welcome' %}" class="logo">{% trans "TalantDev" %}</a>
+
+    <i class="bx bx-menu" id="menu-icon"></i>
+
+    <nav>
+        <a href="{% url 'main:welcome' %}">{% trans "Home" %}</a>
+        <a href="{% url 'main:services' %}">{% trans "Services" %}</a>
+        <a href="{% url 'main:resume' %}">{% trans "Resume" %}</a>
+        <a href="{% url 'main:portfolio' %}">{% trans "Portfolio" %}</a>
+        <a href="{% url 'main:contact' %}" class="active">{% trans "Contact" %}</a>
+    </nav>
+
+</header>
+
+<div class="bars-box active">
+    <div class="bar" style="--i:6;"></div>
+    <div class="bar" style="--i:5;"></div>
+    <div class="bar" style="--i:4;"></div>
+    <div class="bar" style="--i:3;"></div>
+    <div class="bar" style="--i:2;"></div>
+    <div class="bar" style="--i:1;"></div>
+</div>
+
+<section class="contact active">
+    <div class="contact-container">
+        <div class="contact-box">
+            <h2>
+                {% trans "Let's Work Together" %}
+            </h2>
+            <p class="desc">
+                {% trans "Lorem ipsum dolor sit amet, consectetur adipisicing elit. A accusantium animi architecto assumenda delectus doloribus, earum impedit magnam numquam quidem." %}
+            </p>
+            <div class="contact-detail">
+                <i class="bx bxs-phone"></i>
+                <div class="detail">
+                    <p>
+                        {% trans "Phone" %}
+                    </p>
+                    <p>(+998) 99 590 78 50</p>
+                </div>
+            </div>
+            <div class="contact-detail">
+                <i class="bx bxs-envelope"></i>
+                <div class="detail">
+                    <p>
+                        {% trans "Email" %}
+                    </p>
+                    <p>ergashovbotirjon4@gmail.com</p>
+                </div>
+            </div>
+            <div class="contact-detail">
+                <i class="bx bxs-map"></i>
+                <div class="detail">
+                    <p>
+                        {% trans "Address" %}
+                    </p>
+                    <p>
+                        {% trans "6/44 Nurmuhammedov, Tashkent city" %}
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="contact-box">
+            <form action="">
+                <h2 class="heading">
+                    {% trans "Contect" %}
+                    <span>
+                        {% trans "Me!" %}
+                    </span>
+                </h2>
+                <div class="field-box">
+                    <input type="text" placeholder="{% trans 'Full Name' %}" required>
+                    <input type="text" placeholder="{% trans 'Email Address' %}" required>
+                    <input type="text" placeholder="{% trans 'Phone Number' %}" required>
+                    <input type="text" placeholder="{% trans 'Email Subject' %}" required>
+                    <textarea name="" id="" placeholder="{% trans 'Your Message' %}" required></textarea>
+                </div>
+                <button class="btn" type="submit">
+                    {% trans "Send Message" %}
+                </button>
+            </form>
+        </div>
+    </div>
+</section>
+
+
+<script src="{% static 'js/script.js' %}"></script>
+</body>
+</html>

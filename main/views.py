@@ -3,24 +3,20 @@ from .models import About, Experience, Project, Program
 
 
 def welcome(request):
-    about = About.objects.all()
-    experience = Experience.objects.all()
-    project = Project.objects.all()
-    context = {
-        'about': about[0],
-        'experiences': experience,
-        'projects': project,
-    }
-    return render(request, 'base.html', context)
-
-
-def index(request):
     return render(request, 'index.html')
 
 
-def about(request):
-    return render(request, 'about.html')
+def services(request):
+    return render(request, 'services.html')
 
 
-def service(request):
-    return render(request, 'service.html')
+def resume(request):
+    return render(request, 'resume.html')
+
+
+def portfolio(request):
+    return render(request, 'portfolio.html')
+
+
+def contact(request):
+    return render(request, 'contact.html')

@@ -1,5 +1,6 @@
 <!doctype html>
 {% load static %}
+{% load i18n %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -7,25 +8,27 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="{% static 'css/stylesheet.css' %}">
-    <title>Talantbek</title>
+    <link rel="stylesheet" href="{% static 'style/style.css' %}">
+    <title>{% trans "TalantDev | Backend Programmer" %}</title>
 </head>
 <body>
-<!-- Navbar section start -->
-<nav class="navbar">
-    <a href="#" class="logo">Portfolio.</a>
-    <ul>
-        <li class="active"><a href="{% url 'main:index' %}">Home</a></li>
-        <li><a href="{% url 'main:about' %}">About</a></li>
-        <li><a href="#">Portfolio</a></li>
-        <li><a href="{% url 'main:services' %}">Service</a></li>
-        <li><a href="#">Projects</a></li>
-        <li><a href="#">Contact</a></li>
-    </ul>
-</nav>
-<!-- Navbar section end -->
 
-<div class="bars-animation">
+<header class="active">
+    <a href="{% url 'main:welcome' %}" class="logo">{% trans "TalantDev" %}</a>
+
+    <i class="bx bx-menu" id="menu-icon"></i>
+
+    <nav>
+        <a href="{% url 'main:welcome' %}" class="active">{% trans "Home" %}</a>
+        <a href="{% url 'main:services' %}">{% trans "Services" %}</a>
+        <a href="{% url 'main:resume' %}">{% trans "Resume" %}</a>
+        <a href="{% url 'main:portfolio' %}">{% trans "Portfolio" %}</a>
+        <a href="{% url 'main:contact' %}">{% trans "Contact" %}</a>
+    </nav>
+
+</header>
+
+<div class="bars-box active">
     <div class="bar" style="--i:6;"></div>
     <div class="bar" style="--i:5;"></div>
     <div class="bar" style="--i:4;"></div>
@@ -34,33 +37,50 @@
     <div class="bar" style="--i:1;"></div>
 </div>
 
-<section class="home">
-    <div class="home-info">
-        <h1>Ergashov Botirjon</h1>
-        <h2>I'm a
-            <span style="--i:4" data-text="Backend Developer">Backend Developer</span>
-            <span style="--i:3" data-text="Python Develper">Python Develper</span>
-            <span style="--i:2" data-text="Middle Developer">Middle Developer</span>
-            <span style="--i:1" data-text="Full Developer">Full Developer</span>
+<section class="home active">
+    <div class="home-detail">
+        <h1>{% trans "Ergashov Botirjon" %}</h1>
+        <h2>
+            <span style="--i:4" data-text="{% trans 'Backend Developer' %}">
+                {% trans 'Backend Developer' %}
+            </span>
+            <span style="--i:3" data-text="{% trans 'Full Stack Developer' %}">
+                {% trans 'Full Stack Developer' %}
+            </span>
+            <span style="--i:2" data-text="{% trans 'Python Developer' %}">
+                {% trans 'Python Developer' %}
+            </span>
+            <span style="--i:1" data-text="{% trans 'Middle Developer' %}">
+                {% trans 'Middle Developer' %}
+            </span>
         </h2>
         <p>
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-            industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
-            scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into
-            electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of
-            Letraset
+            {% trans "Lorem ipsum dolor sit amet, consectetur adipisicing elit. A at atque cumque dolorum eos harum molestias non pariatur, provident quae quisquam rem repellat repudiandae rerum soluta ullauisquam rem repellat repudiandae rerum soluta ullam unde vitae, voluptatem." %}
         </p>
         <div class="btn-sci">
-            <a href="#" class="btn">Download CV</a>
+            <a href="#" class="btn"> 
+                {% trans "Downoad CV" %}
+            </a>
             <div class="sci">
-                <a href="#"><i class='bx bxl-github'></i></a>
-                <a href="#"><i class='bx bxl-linkedin'></i></a>
-                <a href="#"><i class='bx bxl-twitter'></i></a>
-                <a href="#"><i class='bx bxl-instagram'></i></a>
-                <a href="#"><i class='bx bxl-telegram'></i></a>
+                <a href="https://github.com/TalantDeveloper">
+                    <i class='bx bxl-github'></i>
+                </a>
+                <a href="https://t.me/Talantbek001">
+                    <i class='bx bxl-telegram'></i>
+                </a>
+                <a href="mailto:ergashovbotirjon4@gmail.com">
+                    <i class='bx bxl-gmail'></i>
+                </a>
+                <a href="https://www.linkedin.com/in/botirjon-ergashov-919a67258/">
+                    <i class='bx bxl-linkedin'></i>
+                </a>
+                <a href="https://www.instagram.com/botirjon642/">
+                    <i class='bx bxl-instagram'></i>
+                </a>
             </div>
         </div>
     </div>
+
     <div class="home-img">
         <div class="img-box">
             <div class="img-item">
@@ -70,5 +90,6 @@
     </div>
 </section>
 
+<script src="{% static 'js/script.js' %}"></script>
 </body>
 </html>

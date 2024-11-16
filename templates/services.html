@@ -1,0 +1,126 @@
+<!doctype html>
+{% load static %}
+{% load i18n %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="{% static 'style/style.css' %}">
+    <title>{% trans "TalantDev | Backend Programmer" %}</title>
+</head>
+<body>
+
+<header class="active">
+    <a href="{% url 'main:welcome' %}" class="logo">{% trans "TalantDev" %}</a>
+
+    <i class="bx bx-menu" id="menu-icon"></i>
+
+    <nav>
+        <a href="{% url 'main:welcome' %}">{% trans "Home" %}</a>
+        <a href="{% url 'main:services' %}" class="active">{% trans "Services" %}</a>
+        <a href="{% url 'main:resume' %}">{% trans "Resume" %}</a>
+        <a href="{% url 'main:portfolio' %}">{% trans "Portfolio" %}</a>
+        <a href="{% url 'main:contact' %}">{% trans "Contact" %}</a>
+    </nav>
+
+</header>
+
+<div class="bars-box active">
+    <div class="bar" style="--i:6;"></div>
+    <div class="bar" style="--i:5;"></div>
+    <div class="bar" style="--i:4;"></div>
+    <div class="bar" style="--i:3;"></div>
+    <div class="bar" style="--i:2;"></div>
+    <div class="bar" style="--i:1;"></div>
+</div>
+
+<section class="services active">
+    <h2 class="heading">
+        {% trans "My" %}
+        <span>
+            {% trans "Services" %}
+        </span>
+    </h2>
+    <div class="services-container">
+        <div class="services-box">
+            <div class="icon">
+                <i class='bx bx-code-alt'></i>
+                <a href="#"><i class='bx bx-arrow-back'></i></a>
+            </div>
+            <h3>
+                Web Development
+            </h3>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur a animi commodi consequuntur, distinctio hic
+            </p>
+        </div>
+        <div class="services-box">
+            <div class="icon">
+                <i class='bx bx-code-alt'></i>
+                <a href="#"><i class='bx bx-arrow-back'></i></a>
+            </div>
+            <h3>
+                REST API
+            </h3>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur a animi commodi consequuntur, distinctio hic
+            </p>
+        </div>
+        <div class="services-box">
+            <div class="icon">
+                <i class='bx bxs-bot'></i>
+                <a href="#"><i class='bx bx-arrow-back'></i></a>
+            </div>
+            <h3>
+                Telegram bot
+            </h3>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur a animi commodi consequuntur, distinctio hic
+            </p>
+        </div>
+        <div class="services-box">
+            <div class="icon">
+                <i class='bx bx-trending-up'></i>
+                <a href="#"><i class='bx bx-arrow-back'></i></a>
+            </div>
+            <h3>
+                Telegram bot
+            </h3>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur a animi commodi consequuntur, distinctio hic
+            </p>
+        </div>
+        <div class="services-box">
+            <div class="icon">
+                <i class='bx bx-trending-up'></i>
+                <a href="#"><i class='bx bx-arrow-back'></i></a>
+            </div>
+            <h3>
+                Telegram bot
+            </h3>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur a animi commodi consequuntur, distinctio hic
+            </p>
+        </div>
+        <div class="services-box">
+            <div class="icon">
+                <i class='bx bx-trending-up'></i>
+                <a href="#"><i class='bx bx-arrow-back'></i></a>
+            </div>
+            <h3>
+                Telegram bot
+            </h3>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur a animi commodi consequuntur, distinctio hic
+            </p>
+        </div>
+
+    </div>
+</section>
+
+<script src="{% static 'js/script.js' %}"></script>
+</body>
+</html>
