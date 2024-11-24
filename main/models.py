@@ -2,41 +2,95 @@ from django.db import models
 from ckeditor_uploader.fields import RichTextUploadingField
 
 
-class About(models.Model):
-    content = RichTextUploadingField(verbose_name='content')
-
-    def __str__(self):
-        return str(self.id)
-
-
-class Program(models.Model):
+class Science(models.Model):
     name = models.CharField(max_length=100)
 
     def __str__(self):
         return self.name
 
 
+class About(models.Model):
+    full_name = models.CharField(max_length=100)
+    sciences = models.ManyToManyField(Science)
+    content = RichTextUploadingField(verbose_name='Content')
+    cv_file = models.FileField(upload_to='cv_files/')
+    image = models.ImageField(upload_to='images/')
+
+    def __str__(self):
+        return self.full_name
+
+
+class Service(models.Model):
+    name = models.CharField(max_length=100)
+    icon_class = models.CharField(max_length=100)
+    content = RichTextUploadingField(verbose_name='Content')
+    link = models.URLField(verbose_name='Link')
+
+    def __str__(self):
+        return self.name
+
+
 class Experience(models.Model):
-    name = models.CharField(max_length=200)
-    position = models.CharField(max_length=200, null=True, blank=True)
-    date = models.CharField(max_length=200)
-    content = RichTextUploadingField(verbose_name='content')
-    programs = models.ManyToManyField(Program, null=True, blank=True)
-    url = models.URLField(verbose_name='url', null=True, blank=True)
+    name = models.CharField(max_length=100)
+    content = models.TextField()
+
+    def __str__(self):
+        return self.name
+
+
+class Card(models.Model):
+    experience = models.ForeignKey(Experience, on_delete=models.SET_NULL, null=True)
+    date_time = models.CharField(max_length=100)
+    direction = models.CharField(max_length=100)
+    company = models.CharField(max_length=100)
+    content = models.TextField()
+
+    def __str__(self):
+        return self.date_time
+
+
+class Skill(models.Model):
+    name = models.CharField(max_length=100)
+    content = models.TextField()
+
+    def __str__(self):
+        return self.name
+
+
+class Course(models.Model):
+    name = models.CharField(max_length=100)
+    icon_class = models.CharField(max_length=100)
+    skill = models.ForeignKey(Skill, on_delete=models.SET_NULL, null=True)
+
+    def __str__(self):
+        return self.name
+
+
+class AboutMe(models.Model):
+    name = models.CharField(max_length=100)
+    content = models.TextField()
+
+    def __str__(self):
+        return self.name
+
+
+class Engine(models.Model):
+    name = models.CharField(max_length=100)
+    result = models.CharField(max_length=100)
+    about_me = models.ForeignKey(AboutMe, on_delete=models.SET_NULL, null=True)
 
     def __str__(self):
         return self.name
 
 
 class Project(models.Model):
-    name = models.CharField(max_length=200)
-    image = models.ImageField(upload_to='images/', null=True, blank=True)
-    url = models.URLField(verbose_name='url', null=True, blank=True)
-    content = RichTextUploadingField(verbose_name='content')
+    pro_id = models.CharField(max_length=50)
+    name = models.CharField(max_length=100)
+    content = models.TextField()
+    technology = models.CharField(max_length=100)
+    live_link = models.CharField(max_length=300)
+    github_link = models.CharField(max_length=300)
+    image = models.ImageField(upload_to='./project_image')
 
     def __str__(self):
         return self.name
-
-
-# class
-

@@ -24,6 +24,9 @@
         <a href="{% url 'main:resume' %}">{% trans "Resume" %}</a>
         <a href="{% url 'main:portfolio' %}" class="active">{% trans "Portfolio" %}</a>
         <a href="{% url 'main:contact' %}">{% trans "Contact" %}</a>
+        <a href="/uz/" class="{% trans 'active' %} dropdown">{% trans "Uz" %}</a>
+        <a href="/en/" class="{% trans 'active' %} dropdown">{% trans "En" %}</a>
+        <a href="/ru/" class="{% trans 'active' %} dropdown">{% trans "Ru" %}</a>
     </nav>
 
 </header>
@@ -39,7 +42,7 @@
 
 <section class="portfolio active">
     <h2 class="heading">
-        {% trans "Latest" %} 
+        {% trans "Latest" %}
         <span>
             {% trans "Project" %}
         </span>
@@ -77,12 +80,11 @@
                     </a>
                 </div>
             </div>
-            
+
         </div>
         <div class="portfolio-box">
             <div class="portfolio-carousel">
                 <div class="img-slide">
-                    
                     <div class="img-item">
                         <img src="./img/portfolio1.webp" alt="">
                     </div>
