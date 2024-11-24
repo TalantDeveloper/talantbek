@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import About, Experience, Project, Program
+# from .models import About, Experience, Project, Program
 
 
 def welcome(request):

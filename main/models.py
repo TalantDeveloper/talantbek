@@ -2,95 +2,102 @@ from django.db import models
 from ckeditor_uploader.fields import RichTextUploadingField
 
 
-class Science(models.Model):
-    name = models.CharField(max_length=100)
-
-    def __str__(self):
-        return self.name
-
-
 class About(models.Model):
-    full_name = models.CharField(max_length=100)
-    sciences = models.ManyToManyField(Science)
-    content = RichTextUploadingField(verbose_name='Content')
-    cv_file = models.FileField(upload_to='cv_files/')
-    image = models.ImageField(upload_to='images/')
+    full_name = models.CharField(max_length=100, verbose_name="Full name")  # Multilanguage
+    content = RichTextUploadingField(verbose_name='Content')  # Multilanguage
+    cv_file = models.FileField(upload_to='./cvfile/')
+    image = models.ImageField(upload_to='./image/')
+
+    create_at = models.DateTimeField(auto_now_add=True)
+    update_at = models.DateTimeField(auto_now=True)
 
     def __str__(self):
         return self.full_name
 
 
-class Service(models.Model):
-    name = models.CharField(max_length=100)
-    icon_class = models.CharField(max_length=100)
-    content = RichTextUploadingField(verbose_name='Content')
+class Science(models.Model):  # Science model for Home page animation text
+    name = models.CharField(max_length=100, verbose_name="Name")  # Multilanguage
+
+    create_at = models.DateTimeField(auto_now_add=True)
+    update_at = models.DateTimeField(auto_now=True)
+
+    def __str__(self):
+        return self.name
+
+
+class Service(models.Model):  # Service model for Services page
+    name = models.CharField(max_length=100, verbose_name="Name")  # Multilanguage
+    icon_class = models.CharField(max_length=100, verbose_name="Boxicons icon class")
+    content = RichTextUploadingField(verbose_name='Content')  # Multilanguage
     link = models.URLField(verbose_name='Link')
 
-    def __str__(self):
-        return self.name
-
-
-class Experience(models.Model):
-    name = models.CharField(max_length=100)
-    content = models.TextField()
+    create_at = models.DateTimeField(auto_now_add=True)
+    update_at = models.DateTimeField(auto_now=True)
 
     def __str__(self):
         return self.name
 
 
-class Card(models.Model):
-    experience = models.ForeignKey(Experience, on_delete=models.SET_NULL, null=True)
-    date_time = models.CharField(max_length=100)
-    direction = models.CharField(max_length=100)
-    company = models.CharField(max_length=100)
-    content = models.TextField()
+class Page(models.Model):  # Page model for Resume Page Card, Skill and About Me section
+    name = models.CharField(max_length=100, verbose_name="Name")  # Multilanguage
+    content = models.TextField(verbose_name="Content")  # Multilanguage
+
+    create_at = models.DateTimeField(auto_now_add=True)
+    update_at = models.DateTimeField(auto_now=True)
+
+    def __str__(self):
+        return self.name
+
+
+class Card(models.Model):  # Card model for Resume page Experience and Education sections
+    page = models.ForeignKey(Page, on_delete=models.SET_NULL, null=True, verbose_name="Experience or Education")
+    date_time = models.CharField(max_length=100, verbose_name="Date day")  # Multilanguage
+    direction = models.CharField(max_length=100, verbose_name="Yo'nalish")  # Multilanguage
+    company = models.CharField(max_length=100, verbose_name="Company")  # Multilanguage
+    content = models.TextField(verbose_name="Content")  # Multilanguage
+
+    create_at = models.DateTimeField(auto_now_add=True)
+    update_at = models.DateTimeField(auto_now=True)
 
     def __str__(self):
         return self.date_time
 
 
-class Skill(models.Model):
-    name = models.CharField(max_length=100)
-    content = models.TextField()
+class Skill(models.Model):  # Skills model for Resume page Skills section
+    name = models.CharField(max_length=100, verbose_name="Skills Name")
+    icon_class = models.CharField(max_length=100, verbose_name="Boxicons Icon Class")
+    skill = models.ForeignKey(Page, on_delete=models.SET_NULL, null=True, verbose_name="Skill")
+
+    create_at = models.DateTimeField(auto_now_add=True)
+    update_at = models.DateTimeField(auto_now=True)
 
     def __str__(self):
         return self.name
 
 
-class Course(models.Model):
-    name = models.CharField(max_length=100)
-    icon_class = models.CharField(max_length=100)
-    skill = models.ForeignKey(Skill, on_delete=models.SET_NULL, null=True)
+class AboutMe(models.Model):  # About Me models for Resume page About Me section
+    name = models.CharField(max_length=100, verbose_name="Type")  # Multilanguage
+    result = models.CharField(max_length=100, verbose_name="Content")  # Multilanguage
+    about_me = models.ForeignKey(Page, on_delete=models.SET_NULL, null=True, verbose_name="About Me")
+
+    create_at = models.DateTimeField(auto_now_add=True)
+    update_at = models.DateTimeField(auto_now=True)
 
     def __str__(self):
         return self.name
 
 
-class AboutMe(models.Model):
-    name = models.CharField(max_length=100)
-    content = models.TextField()
+class Project(models.Model):  # Project Models for Portfolio Page
+    pro_id = models.CharField(max_length=50, verbose_name="Project Number")
+    name = models.CharField(max_length=200, verbose_name="Project Name")  # Multilanguage
+    content = models.TextField(verbose_name="Content")  # Multilanguage
+    technology = models.CharField(max_length=100, verbose_name="Technology")
+    live_link = models.CharField(max_length=300, verbose_name="Project live link")
+    github_link = models.CharField(max_length=300, verbose_name="Project Github link", null=True)
+    image = models.ImageField(upload_to='./project/')
 
-    def __str__(self):
-        return self.name
-
-
-class Engine(models.Model):
-    name = models.CharField(max_length=100)
-    result = models.CharField(max_length=100)
-    about_me = models.ForeignKey(AboutMe, on_delete=models.SET_NULL, null=True)
-
-    def __str__(self):
-        return self.name
-
-
-class Project(models.Model):
-    pro_id = models.CharField(max_length=50)
-    name = models.CharField(max_length=100)
-    content = models.TextField()
-    technology = models.CharField(max_length=100)
-    live_link = models.CharField(max_length=300)
-    github_link = models.CharField(max_length=300)
-    image = models.ImageField(upload_to='./project_image')
+    create_at = models.DateTimeField(auto_now_add=True)
+    update_at = models.DateTimeField(auto_now=True)
 
     def __str__(self):
         return self.name

@@ -79,6 +79,22 @@ TEMPLATES = [
     },
 ]
 
+LANGUAGE_CODE = 'en'
+
+LANGUAGES = [
+    ('en', _('English')),
+    ('uz', _("O'zbek")),
+    ('ru', _("Russian"))
+]
+
+LOCALE_PATHS = [
+    os.path.join(BASE_DIR, 'locate'),
+]
+
+MODELTRANSLATION_DEFAULT_LANGUAGE = 'en'
+
+MODELTRANSLATION_LANGUAGES = ('en', 'uz', 'ru')
+
 # CKEDITOR Settings
 
 CKEDITOR_BASEPATH = '/static/ckeditor/ckeditor/'
@@ -152,21 +168,6 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/5.0/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
-
-LANGUAGES = [
-    ('en', _('English')),
-    ('uz', _("O'zbek")),
-    ('ru', _("Russian"))
-]
-
-LOCALE_PATHS = [
-    os.path.join(BASE_DIR, 'locale'),
-]
-
-MODELTRANSLATION_DEFAULT_LANGUAGE = 'en'
-
-MODELTRANSLATION_LANGUAGES = ('en', 'uz', 'ru')
 
 TIME_ZONE = 'Asia/Tashkent'
 
