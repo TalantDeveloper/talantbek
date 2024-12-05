@@ -26,6 +26,26 @@
         <a href="{% url 'main:portfolio' %}">{% trans "Portfolio" %}</a>
         <a href="{% url 'main:contact' %}">{% trans "Contact" %}</a>
     </nav>
+    <div class="dropdowns">
+        <span id="lang">
+            <img src="{% static '/img/uz.png' %}" alt="" width="30">
+            {% trans "Uz" %}
+        </span>
+        <div class="dropdown-content">
+            <p>
+                <a href="{% trans '/first/' %}" class="active dropdown">
+                    <img src="{% static '/img/uk.png' %}" alt="" width="30">
+                    {% trans "first_lan" %}
+                </a>
+            </p>
+            <p>
+                <a href="{% trans '/second/' %}" class="active dropdown">
+                    <img src="{% static '/img/ru.png' %}" alt="" width="30">
+                    {% trans "second_lan" %}
+                </a>
+            </p>
+        </div>
+    </div>
 
 </header>
 
