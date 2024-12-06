@@ -9,4 +9,5 @@ urlpatterns = [
     path('resume/', views.resume, name='resume'),
     path('portfolio/', views.portfolio, name='portfolio'),
     path('contact/', views.contact, name='contact'),
+    path('page/', views.page_views, name='page'),
 ]

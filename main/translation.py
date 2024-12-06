@@ -1,4 +1,4 @@
-from .models import About, Science, Service, Page, Card, AboutMe, Project
+from .models import About, Science, Service, Page, Card, AboutMe, Project, Language, SectionPage
 from modeltranslation.translator import TranslationOptions, register
 
 
@@ -34,4 +34,14 @@ class AboutMeTranslationOptions(TranslationOptions):
 
 @register(Project)
 class ProjectTranslationOptions(TranslationOptions):
+    fields = ('name', 'content')
+
+
+@register(Language)
+class LanguageTranslationOptions(TranslationOptions):
+    fields = ('base', 'base_url', 'base_img', 'first', 'first_url', 'first_img', 'second', 'second_url', 'second_img')
+
+
+@register(SectionPage)
+class SectionTranslationOptions(TranslationOptions):
     fields = ('name', 'content')

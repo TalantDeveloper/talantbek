@@ -28,20 +28,20 @@
     </nav>
     <div class="dropdowns">
         <span id="lang">
-            <img src="{% static '/img/uz.png' %}" alt="" width="30">
-            {% trans "base" %}
+            <img src="{{ language.base_img.url }}" alt="" width="30">
+            {{ language.base }}
         </span>
         <div class="dropdown-content">
             <p>
-                <a href="{% trans '/first/' %}" class="active dropdown">
-                    <img src="{% static '/img/uk.png' %}" alt="" width="30">
-                    {% trans "first_lan" %}
+                <a href="{{ language.first_url }}" class="active dropdown">
+                    <img src="{{ language.first_img.url }}" alt="" width="30">
+                    {{ language.first }}
                 </a>
             </p>
             <p>
-                <a href="{% trans '/second/' %}" class="active dropdown">
-                    <img src="{% static '/img/ru.png' %}" alt="" width="30">
-                    {% trans "second_lan" %}
+                <a href="{{ language.second_url }}" class="active dropdown">
+                    <img src="{{ language.second_img.url }}" alt="" width="30">
+                    {{ language.second }}
                 </a>
             </p>
         </div>
@@ -66,18 +66,24 @@
         </span>
     </h2>
     <div class="services-container">
-        <div class="services-box">
-            <div class="icon">
-                <i class='bx bx-code-alt'></i>
-                <a href="#"><i class='bx bx-arrow-back'></i></a>
+        {% for service in services %}
+            <div class="services-box">
+                <div class="icon">
+                    <i class='{{ service.icon_class }}'></i>
+                    <a href="{{ service.link }}">
+                        <i class="bx bx-arrow-back"></i>
+                    </a>
+                </div>
+                <h3>
+                    {{ service.name }}
+                </h3>
+                <p>
+                    {{ service.content|safe }}
+                </p>
             </div>
-            <h3>
-                Web Development
-            </h3>
-            <p>
-                Lorem ipsum dolor sit amet, consectetur a animi commodi consequuntur, distinctio hic
-            </p>
-        </div>
+        {% endfor %}
+
+
         <div class="services-box">
             <div class="icon">
                 <i class='bx bx-code-alt'></i>

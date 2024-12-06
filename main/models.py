@@ -101,3 +101,32 @@ class Project(models.Model):  # Project Models for Portfolio Page
 
     def __str__(self):
         return self.name
+
+
+class Language(models.Model):
+    base = models.CharField(max_length=20)
+    base_url = models.CharField(max_length=20)
+    base_img = models.ImageField(upload_to='images/', null=True)
+    first = models.CharField(max_length=20)
+    first_url = models.CharField(max_length=20)
+    first_img = models.ImageField(upload_to='images/', null=True)
+    second = models.CharField(max_length=20)
+    second_url = models.CharField(max_length=20)
+    second_img = models.ImageField(upload_to='images/', null=True)
+
+    create_at = models.DateTimeField(auto_now_add=True)
+    update_at = models.DateTimeField(auto_now=True)
+
+    def __str__(self):
+        return self.base
+
+
+class SectionPage(models.Model):
+    name = models.CharField(max_length=200, verbose_name="Section Name")
+    content = RichTextUploadingField(verbose_name='Content')
+
+    create_at = models.DateTimeField(auto_now_add=True)
+    update_at = models.DateTimeField(auto_now=True)
+
+    def __str__(self):
+        return self.name

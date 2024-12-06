@@ -20,13 +20,11 @@
     <i class="bx bx-menu" id="menu-icon"></i>
 
     <nav>
-        <a href="{% url 'main:welcome' %}">{% trans "Home" %}</a>
+        <a href="{% url 'main:welcome' %}" class="active">{% trans "Home" %}</a>
         <a href="{% url 'main:services' %}">{% trans "Services" %}</a>
         <a href="{% url 'main:resume' %}">{% trans "Resume" %}</a>
-        <a href="{% url 'main:portfolio' %}" class="active">{% trans "Portfolio" %}</a>
+        <a href="{% url 'main:portfolio' %}">{% trans "Portfolio" %}</a>
         <a href="{% url 'main:contact' %}">{% trans "Contact" %}</a>
-
-
     </nav>
     <div class="dropdowns">
         <span id="lang">
@@ -60,68 +58,20 @@
     <div class="bar" style="--i:1;"></div>
 </div>
 
-<section class="portfolio active">
+<section class="service active">
     <h2 class="heading">
-        {% trans "Latest" %}
         <span>
-            {% trans "Project" %}
+            {% trans "Services" %}
         </span>
     </h2>
-    <div class="portfolio-container">
-        <div class="portfolio-box">
-            <div class="portfolio-detail active">
-                <p class="numb">
-                    01
-                </p>
-                <h3>
-                    Backend Project
-                </h3>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores atque dolores iste iure nemo
-                    sapiente sequi similique veritatis.
-                </p>
-                <div class="tech">
-                    <p>
-                        HTML5, CSS3, Python
-                    </p>
-                </div>
-                <div class="live-github">
-                    <a href="#">
-                        <i class="bx bx-arrow-back"></i>
-                        <span>
-                            {% trans "Live Project" %}
-                        </span>
-                    </a>
-                    <a href="#">
-                        <i class="bx bxl-github"></i>
-                        <span>
-                            {% trans "GitHub Repository" %}
-                        </span>
-                    </a>
-                </div>
-            </div>
-
-        </div>
-        <div class="portfolio-box">
-            <div class="portfolio-carousel">
-                <div class="img-slide">
-                    <div class="img-item">
-                        <img src="./img/portfolio1.webp" alt="">
-                    </div>
-                </div>
-            </div>
-            <div class="navigation">
-                <button class="arrow-left disabled">
-                    <i class="bx bx-chevron-left"></i>
-                </button>
-                <button class="arrow-right">
-                    <i class="bx bx-chevron-right"></i>
-                </button>
-            </div>
-        </div>
+    <div class="home-detail">
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. A at atque cumque dolorum eos harum molestias non
+            pariatur, provident quae quisquam rem repellat repudiandae rerum soluta ullauisquam rem repellat repudiandae
+            rerum soluta ullam unde vitae, voluptatem.
+        </p>
     </div>
 </section>
-
 <script src="{% static 'js/script.js' %}"></script>
 </body>
 </html>

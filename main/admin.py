@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import About, Science, Service, Page, Card, Skill, AboutMe, Project
+from .models import About, Science, Service, Page, Card, Skill, AboutMe, Project, Language, SectionPage
 from modeltranslation.admin import TranslationAdmin
 
 
@@ -59,3 +59,15 @@ class AboutMeAdmin(TranslationAdmin):
 class ProjectAdmin(TranslationAdmin):
     list_display = ('id', 'name', 'technology', 'live_link', 'github_link', 'create_at', 'update_at')
     list_display_links = ('id', 'name', 'technology', 'live_link', 'github_link')
+
+
+@admin.register(Language)
+class LanguageAdmin(TranslationAdmin):
+    list_display = ('id', 'base', 'base_url', 'first', 'first_url', 'second', 'second_url')
+    list_display_links = ('id', 'base', 'base_url')
+
+
+@admin.register(SectionPage)
+class SectionPageAdmin(TranslationAdmin):
+    list_display = ('id', 'name', 'create_at', 'update_at')
+    list_display_links = ('id', 'name')
