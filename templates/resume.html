@@ -65,7 +65,7 @@
                 {% trans 'Why Hire Me?' %}
             </h2>
             <p class="desc">
-                {% trans "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut est fugiat" %}
+                {% trans "Information about my work, studies, and skills." %}
             </p>
             <button class="resume-btn active">
                 {% trans "Experience" %}
@@ -85,97 +85,30 @@
                 <h2 class="heading">
                     {% trans "My" %}
                     <span>
-                        {% trans "Experience" %}
+                        {{ experience.name }}
                     </span>
                 </h2>
                 <p class="desc">
-                    {% trans "Lorem ipsum dolor, consectetur adipisicing elit. Animi doloribus facilis fugiat id impedit" %}
+                    {{ experience.content }}
                 </p>
                 <div class="resume-list">
-                    <div class="resume-item">
-                        <p class="year">
-                            2023-Present
-                        </p>
-                        <h3>
-                            Network Administrator
-                        </h3>
-                        <p class="company">
-                            TSDI
-                        </p>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. am od
-                        </p>
-                    </div>
-                    <div class="resume-item">
-                        <p class="year">
-                            2023-Present
-                        </p>
-                        <h3>
-                            Network Administrator
-                        </h3>
-                        <p class="company">
-                            TSDI
-                        </p>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. am od
-                        </p>
-                    </div>
-                    <div class="resume-item">
-                        <p class="year">
-                            2023-Present
-                        </p>
-                        <h3>
-                            Network Administrator
-                        </h3>
-                        <p class="company">
-                            TSDI
-                        </p>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. am od
-                        </p>
-                    </div>
-                    <div class="resume-item">
-                        <p class="year">
-                            2023-Present
-                        </p>
-                        <h3>
-                            Network Administrator
-                        </h3>
-                        <p class="company">
-                            TSDI
-                        </p>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. am od
-                        </p>
-                    </div>
-                    <div class="resume-item">
-                        <p class="year">
-                            2023-Present
-                        </p>
-                        <h3>
-                            Network Administrator
-                        </h3>
-                        <p class="company">
-                            TSDI
-                        </p>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. am od
-                        </p>
-                    </div>
-                    <div class="resume-item">
-                        <p class="year">
-                            2023-Present
-                        </p>
-                        <h3>
-                            Network Administrator
-                        </h3>
-                        <p class="company">
-                            TSDI
-                        </p>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. am od
-                        </p>
-                    </div>
+
+                    {% for experien in experiences %}
+                        <div class="resume-item">
+                            <p class="year">
+                                {{ experien.date_time }}
+                            </p>
+                            <h3>
+                                {{ experien.direction }}
+                            </h3>
+                            <p class="company">
+                                {{ experien.company }}
+                            </p>
+                            <p>
+                                {{ experien.content }}
+                            </p>
+                        </div>
+                    {% endfor %}
                 </div>
             </div>
 
@@ -183,97 +116,31 @@
                 <h2 class="heading">
                     {% trans "My" %}
                     <span>
-                        {% trans "Education" %}
+                        {{ education.name }}
                     </span>
                 </h2>
                 <p class="desc">
-                    {% trans "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi doloribus facilis fugiat id impedit vel! Animi consectetur culpa dolorum ipsa maxime." %}
+                    {{ education.content }}
                 </p>
                 <div class="resume-list">
-                    <div class="resume-item">
-                        <p class="year">
-                            2023-Present
-                        </p>
-                        <h3>
-                            Telecommunication
-                        </h3>
-                        <p class="company">
-                            TUIT
-                        </p>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. am od
-                        </p>
-                    </div>
-                    <div class="resume-item">
-                        <p class="year">
-                            2023-Present
-                        </p>
-                        <h3>
-                            Telecommunication
-                        </h3>
-                        <p class="company">
-                            TSDI
-                        </p>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. am od
-                        </p>
-                    </div>
-                    <div class="resume-item">
-                        <p class="year">
-                            2023-Present
-                        </p>
-                        <h3>
-                            Telecommunication
-                        </h3>
-                        <p class="company">
-                            TSDI
-                        </p>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. am od
-                        </p>
-                    </div>
-                    <div class="resume-item">
-                        <p class="year">
-                            2023-Present
-                        </p>
-                        <h3>
-                            Telecommunication
-                        </h3>
-                        <p class="company">
-                            TSDI
-                        </p>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. am od
-                        </p>
-                    </div>
-                    <div class="resume-item">
-                        <p class="year">
-                            2023-Present
-                        </p>
-                        <h3>
-                            Telecommunication
-                        </h3>
-                        <p class="company">
-                            TSDI
-                        </p>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. am od
-                        </p>
-                    </div>
-                    <div class="resume-item">
-                        <p class="year">
-                            2023-Present
-                        </p>
-                        <h3>
-                            Telecommunication technology
-                        </h3>
-                        <p class="company">
-                            Tashkent University of Information Technology
-                        </p>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. am od
-                        </p>
-                    </div>
+                    {% for educat in educations %}
+                        <div class="resume-item">
+                            <p class="year">
+                                {{ educat.date_time }}
+                            </p>
+                            <h3>
+                                {{ educat.direction }}
+                            </h3>
+                            <p class="company">
+                                {{ educat.company }}
+                            </p>
+                            <p>
+                                {{ educat.content }}
+                            </p>
+                        </div>
+                    {% endfor %}
+
+
                 </div>
             </div>
 
@@ -281,171 +148,47 @@
                 <h2 class="heading">
                     {% trans "My" %}
                     <span>
-                        {% trans "Skills" %}
+                        {{ skill.name }}
                     </span>
                 </h2>
                 <p class="desc">
-                    {% trans "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi doloribus facilis fugiat id impedit vel! Animi consectetur culpa dolorum ipsa maxime." %}
+                    {{ skill.content }}
                 </p>
                 <div class="resume-list">
-                    <div class="resume-item">
-                        <i class='bx bxl-html5'></i>
-                        <span>
-                            HTML5
+                    {% for skil in skills %}
+                        <div class="resume-item">
+                            <i class='{{ skil.icon_class }}'></i>
+                            <span>
+                            {{ skil.name }}
                         </span>
-                    </div>
-                    <div class="resume-item">
-                        <i class='bx bxl-css3'></i>
-                        <span>
-                            CSS3
-                        </span>
-                    </div>
-                    <div class="resume-item">
-                        <i class='bx bxl-javascript'></i>
-                        <span>
-                            JavaScript
-                        </span>
-                    </div>
-                    <div class="resume-item">
-                        <i class='bx bxl-bootstrap'></i>
-                        <span>
-                            Bootstrap
-                        </span>
-                    </div>
-                    <div class="resume-item">
-                        <i class='bx bxl-python'></i>
-                        <span>
-                            Python3
-                        </span>
-                    </div>
-                    <div class="resume-item">
-                        <i class='bx bxl-django'></i>
-                        <span>
-                            Django
-                        </span>
-                    </div>
-                    <div class="resume-item">
-                        <i class='bx bxl-postgresql'></i>
-                        <span>
-                            PostgreSQL
-                        </span>
-                    </div>
-                    <div class="resume-item">
-                        <i class='bx bx-signal-5'></i>
-                        <span>
-                            Network
-                        </span>
-                    </div>
+                        </div>
+                    {% endfor %}
+
                 </div>
             </div>
 
             <div class="resume-detail about">
                 <h2 class="heading">
-                    {% trans "About" %}
+                    {{ about_me.name }}
                     <span>
                         {% trans "Me" %}
                     </span>
                 </h2>
                 <p class="desc">
-                    {% trans "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi doloribus facilis fugiat id impedit vel! Animi consectetur culpa dolorum ipsa maxime." %}
+                    {{ about_me.content }}
                 </p>
                 <div class="resume-list">
-                    <div class="resume-item">
-                        <p>
-                            Name
-                            <span>
-                                Botirjon Ergashov
+                    {% for aboutme in abouts_me %}
+                        <div class="resume-item">
+                            <p>
+                                {{ aboutme.name }}
+                                <span>
+                                {{ aboutme.result }}
                             </span>
-                        </p>
-                    </div>
-                    <div class="resume-item">
-                        <p>
-                            Gender
-                            <span>
-                                Male
-                            </span>
-                        </p>
-                    </div>
-                    <div class="resume-item">
-                        <p>
-                            Age
-                            <span>
-                                25 Years Old
-                            </span>
-                        </p>
-                    </div>
-                    <div class="resume-item">
-                        <p>
-                            Status
-                            <span>
-                                single
-                            </span>
-                        </p>
-                    </div>
-                    <div class="resume-item">
-                        <p>
-                            City
-                            <span>
-                                Tashkent
-                            </span>
-                        </p>
-                    </div>
-                    <div class="resume-item">
-                        <p>
-                            Nationality
-                            <span>
-                                Uzbek
-                            </span>
-                        </p>
-                    </div>
-                    <div class="resume-item">
-                        <p>
-                            Experience
-                            <span>
-                                10+ Years
-                            </span>
-                        </p>
-                    </div>
-                    <div class="resume-item">
-                        <p>
-                            Full Time
-                            <span>
-                                Available
-                            </span>
-                        </p>
-                    </div>
-                    <div class="resume-item">
-                        <p>
-                            Freelance
-                            <span>
-                                Available
-                            </span>
-                        </p>
-                    </div>
-                    <div class="resume-item">
-                        <p>
-                            Phone
-                            <span>
-                                (+998) 99 590 78 50
-                            </span>
-                        </p>
-                    </div>
-                    <div class="resume-item">
-                        <p>
-                            Email
-                            <span>
-                                ergashovbotirjon@tsdi.uz
-                            </span>
-                        </p>
-                    </div>
-                    <div class="resume-item">
-                        <p>
-                            Languages
-                            <span>
-                                Uzbek, English
-                            </span>
-                        </p>
-                    </div>
+                            </p>
+                        </div>
+                    {% endfor %}
+                
                 </div>
             </div>
 
