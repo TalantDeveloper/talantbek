@@ -60,28 +60,28 @@
 
 <section class="home active">
     <div class="home-detail">
-        <h1>Ergashov Botirjon</h1>
+        <h1>
+            {{ about.full_name }}
+        </h1>
         <h2>
             <span style="--i:4" data-text="Backend Developer">
-                Backend Developer
+                {% trans "Backend Developer" %}
             </span>
             <span style="--i:3" data-text="Full Stack Developer">
-                Full Stack Developer
+                {% trans "Full Stack Developer" %}
             </span>
             <span style="--i:2" data-text="Python Developer">
-                Python Developer
+                {% trans "Python Developer" %}
             </span>
             <span style="--i:1" data-text="Middle Developer">
-                Middle Developer
+                {% trans "Middle Developer" %}
             </span>
         </h2>
         <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. A at atque cumque dolorum eos harum molestias non
-            pariatur, provident quae quisquam rem repellat repudiandae rerum soluta ullauisquam rem repellat repudiandae
-            rerum soluta ullam unde vitae, voluptatem.
+            {{ about.content|safe }}
         </p>
         <div class="btn-sci">
-            <a href="#" class="btn">
+            <a href="{{ about.cv_file.url }}" class="btn">
                 {% trans "Downoad CV" %}
             </a>
             <div class="sci">
@@ -107,7 +107,7 @@
     <div class="home-img">
         <div class="img-box">
             <div class="img-item">
-                <img src="{% static 'img/images.png' %}" alt="">
+                <img src="{{ about.image.url }}" alt="">
             </div>
         </div>
     </div>

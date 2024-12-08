@@ -4,11 +4,9 @@ from .function import get_languages
 
 
 def welcome(request):
-    sciences = Science.objects.first()
     about = About.objects.first()
     language = get_languages()
     context = {
-        'sciences': sciences,
         'about': about,
         'language': language,
     }

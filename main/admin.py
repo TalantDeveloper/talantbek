@@ -8,6 +8,16 @@ class AboutAdmin(TranslationAdmin):
     list_display = ('id', 'full_name', 'cv_file', 'image', 'create_at', 'update_at')
     list_display_links = ('id', 'full_name', 'cv_file', 'image')
 
+    class Media:
+        js = (
+            'http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js',
+            'http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.2/jquery-ui.min.js',
+            'modeltranslation/js/tabbed_translation_fields.js',
+        )
+        css = {
+            'screen': ('modeltranslation/css/tabbed_translation_fields.css',),
+        }
+
 
 @admin.register(Science)
 class ScienceAdmin(TranslationAdmin):
@@ -20,16 +30,26 @@ class ServiceAdmin(TranslationAdmin):
     list_display = ('id', 'name', 'icon_class', 'link', 'create_at', 'update_at')
     list_display_links = ('id', 'name', 'icon_class')
 
+    class Media:
+        js = (
+            'http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js',
+            'http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.2/jquery-ui.min.js',
+            'modeltranslation/js/tabbed_translation_fields.js',
+        )
+        css = {
+            'screen': ('modeltranslation/css/tabbed_translation_fields.css',),
+        }
+
 
 @admin.register(Page)
 class PageAdmin(TranslationAdmin):
     list_display = ('id', 'name', 'content', 'create_at', 'update_at')
     list_display_links = ('id', 'content')
 
-    class Metia:
+    class Media:
         js = (
-            'https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js',
-            'https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.2/jquery-ui.min.js',
+            'http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js',
+            'http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.2/jquery-ui.min.js',
             'modeltranslation/js/tabbed_translation_fields.js',
         )
         css = {
@@ -41,6 +61,16 @@ class PageAdmin(TranslationAdmin):
 class CardAdmin(TranslationAdmin):
     list_display = ('id', 'page', 'date_time', 'direction', 'company')
     list_display_links = ('id', 'page', 'date_time', 'direction', 'company')
+
+    class Media:
+        js = (
+            'http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js',
+            'http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.2/jquery-ui.min.js',
+            'modeltranslation/js/tabbed_translation_fields.js',
+        )
+        css = {
+            'screen': ('modeltranslation/css/tabbed_translation_fields.css',),
+        }
 
 
 @admin.register(Skill)
@@ -54,11 +84,31 @@ class AboutMeAdmin(TranslationAdmin):
     list_display = ('id', 'name', 'result', 'about_me', 'create_at', 'update_at')
     list_display_links = ('id', 'name', 'result', 'about_me')
 
+    class Media:
+        js = (
+            'http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js',
+            'http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.2/jquery-ui.min.js',
+            'modeltranslation/js/tabbed_translation_fields.js',
+        )
+        css = {
+            'screen': ('modeltranslation/css/tabbed_translation_fields.css',),
+        }
+
 
 @admin.register(Project)
 class ProjectAdmin(TranslationAdmin):
     list_display = ('id', 'name', 'technology', 'live_link', 'github_link', 'create_at', 'update_at')
     list_display_links = ('id', 'name', 'technology', 'live_link', 'github_link')
+
+    class Media:
+        js = (
+            'http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js',
+            'http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.2/jquery-ui.min.js',
+            'modeltranslation/js/tabbed_translation_fields.js',
+        )
+        css = {
+            'screen': ('modeltranslation/css/tabbed_translation_fields.css',),
+        }
 
 
 @admin.register(Language)
@@ -66,8 +116,28 @@ class LanguageAdmin(TranslationAdmin):
     list_display = ('id', 'base', 'base_url', 'first', 'first_url', 'second', 'second_url')
     list_display_links = ('id', 'base', 'base_url')
 
+    class Media:
+        js = (
+            'http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js',
+            'http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.2/jquery-ui.min.js',
+            'modeltranslation/js/tabbed_translation_fields.js',
+        )
+        css = {
+            'screen': ('modeltranslation/css/tabbed_translation_fields.css',),
+        }
+
 
 @admin.register(SectionPage)
 class SectionPageAdmin(TranslationAdmin):
     list_display = ('id', 'name', 'create_at', 'update_at')
     list_display_links = ('id', 'name')
+
+    class Media:
+        js = (
+            'http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js',
+            'http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.2/jquery-ui.min.js',
+            'modeltranslation/js/tabbed_translation_fields.js',
+        )
+        css = {
+            'screen': ('modeltranslation/css/tabbed_translation_fields.css',),
+        }

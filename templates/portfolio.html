@@ -68,57 +68,60 @@
         </span>
     </h2>
     <div class="portfolio-container">
-        <div class="portfolio-box">
-            <div class="portfolio-detail active">
-                <p class="numb">
-                    01
-                </p>
-                <h3>
-                    Backend Project
-                </h3>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores atque dolores iste iure nemo
-                    sapiente sequi similique veritatis.
-                </p>
-                <div class="tech">
-                    <p>
-                        HTML5, CSS3, Python
+        {% for project in projects %}
+            <div class="portfolio-box">
+                <div class="portfolio-detail active">
+                    <p class="numb">
+                        {{ project.pro_id }}
                     </p>
-                </div>
-                <div class="live-github">
-                    <a href="#">
-                        <i class="bx bx-arrow-back"></i>
-                        <span>
+                    <h3>
+                        {{ project.name }}
+                    </h3>
+                    <p>
+                        {{ project.content }}
+                    </p>
+                    <div class="tech">
+                        <p>
+                            {{ project.technology }}
+                        </p>
+                    </div>
+                    <div class="live-github">
+                        <a href="{{ project.live_link }}">
+                            <i class="bx bx-arrow-back"></i>
+                            <span>
                             {% trans "Live Project" %}
                         </span>
-                    </a>
-                    <a href="#">
-                        <i class="bx bxl-github"></i>
-                        <span>
+                        </a>
+                        <a href="{{ project.github_link }}">
+                            <i class="bx bxl-github"></i>
+                            <span>
                             {% trans "GitHub Repository" %}
                         </span>
-                    </a>
-                </div>
-            </div>
-
-        </div>
-        <div class="portfolio-box">
-            <div class="portfolio-carousel">
-                <div class="img-slide">
-                    <div class="img-item">
-                        <img src="./img/portfolio1.webp" alt="">
+                        </a>
                     </div>
                 </div>
             </div>
-            <div class="navigation">
-                <button class="arrow-left disabled">
-                    <i class="bx bx-chevron-left"></i>
-                </button>
-                <button class="arrow-right">
-                    <i class="bx bx-chevron-right"></i>
-                </button>
+            
+
+            <div class="portfolio-box">
+                <div class="portfolio-carousel">
+                    <div class="img-slide">
+                        <div class="img-item">
+                            <img src="{{ project.image.url }}" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="navigation">
+                    <button class="arrow-left disabled">
+                        <i class="bx bx-chevron-left"></i>
+                    </button>
+                    <button class="arrow-right">
+                        <i class="bx bx-chevron-right"></i>
+                    </button>
+                </div>
             </div>
-        </div>
+        {% endfor %}
+
     </div>
 </section>
 

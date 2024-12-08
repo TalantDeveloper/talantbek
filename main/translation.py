@@ -9,7 +9,7 @@ class AboutTranslationOptions(TranslationOptions):
 
 @register(Science)
 class ScienceTranslationOptions(TranslationOptions):
-    field = ('name',)
+    fields = ('name',)
 
 
 @register(Service)
