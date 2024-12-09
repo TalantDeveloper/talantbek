@@ -26,6 +26,7 @@
         <a href="{% url 'main:portfolio' %}">{% trans "Portfolio" %}</a>
         <a href="{% url 'main:contact' %}">{% trans "Contact" %}</a>
     </nav>
+    
     <div class="dropdowns">
         <span id="lang">
             <img src="{{ language.base_img.url }}" alt="" width="30">
@@ -66,6 +67,7 @@
         </span>
     </h2>
     <div class="services-container">
+    
         {% for service in services %}
             <div class="services-box">
                 <div class="icon">

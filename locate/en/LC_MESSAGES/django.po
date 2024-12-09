@@ -1,0 +1,198 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-12-09 17:22+0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+#: .\talantbek\settings.py:85
+msgid "English"
+msgstr "English"
+
+#: .\talantbek\settings.py:86
+msgid "O'zbek"
+msgstr "Uzbek"
+
+#: .\talantbek\settings.py:87
+msgid "Russian"
+msgstr "Russian"
+
+#: .\templates\contact.html:13 .\templates\index.html:13
+#: .\templates\page.html:13 .\templates\portfolio.html:13
+#: .\templates\resume.html:13 .\templates\services.html:13
+msgid "TalantDev | Backend Programmer"
+msgstr "TalantDev | Backend Programmer"
+
+#: .\templates\contact.html:18 .\templates\index.html:18
+#: .\templates\page.html:18 .\templates\portfolio.html:18
+#: .\templates\resume.html:18 .\templates\services.html:18
+msgid "TalantDev"
+msgstr "TalantDev"
+
+#: .\templates\contact.html:22 .\templates\index.html:22
+#: .\templates\page.html:23 .\templates\portfolio.html:23
+#: .\templates\resume.html:23 .\templates\services.html:23
+msgid "Home"
+msgstr "Home"
+
+#: .\templates\contact.html:23 .\templates\index.html:23
+#: .\templates\page.html:24 .\templates\page.html:64
+#: .\templates\portfolio.html:24 .\templates\resume.html:24
+#: .\templates\services.html:24 .\templates\services.html:66
+msgid "Services"
+msgstr "Services"
+
+#: .\templates\contact.html:24 .\templates\index.html:24
+#: .\templates\page.html:25 .\templates\portfolio.html:25
+#: .\templates\resume.html:25 .\templates\services.html:25
+msgid "Resume"
+msgstr "Resume"
+
+#: .\templates\contact.html:25 .\templates\index.html:25
+#: .\templates\page.html:26 .\templates\portfolio.html:26
+#: .\templates\resume.html:26 .\templates\services.html:26
+msgid "Portfolio"
+msgstr "Portfolio"
+
+#: .\templates\contact.html:26 .\templates\index.html:26
+#: .\templates\page.html:27 .\templates\portfolio.html:27
+#: .\templates\resume.html:27 .\templates\services.html:27
+msgid "Contact"
+msgstr "Contact"
+
+#: .\templates\contact.html:68
+msgid "Let's Work Together"
+msgstr "Let's Work Together"
+
+#: .\templates\contact.html:71
+msgid "Contact me, I can contribute to the development of your company in many areas."
+msgstr "Contact me, I can contribute to the development of your company in many areas."
+
+#: .\templates\contact.html:77
+msgid "Phone"
+msgstr "Phone"
+
+#: .\templates\contact.html:86
+msgid "Email"
+msgstr "Email"
+
+#: .\templates\contact.html:97
+msgid "Address"
+msgstr "Address"
+
+#: .\templates\contact.html:100
+msgid "6/44 Nurmuhammedov, Tashkent city"
+msgstr "Tashkent city, Yashnabad district, Nurmuhammedov 6-44."
+
+#: .\templates\contact.html:109
+msgid "Contect"
+msgstr "Contact"
+
+#: .\templates\contact.html:111
+msgid "Me!"
+msgstr "Me!"
+
+#: .\templates\contact.html:116
+msgid "Full Name"
+msgstr "Full Name"
+
+#: .\templates\contact.html:117
+msgid "Email Address"
+msgstr "Email Address"
+
+#: .\templates\contact.html:118
+msgid "Phone Number"
+msgstr "Phone Number"
+
+#: .\templates\contact.html:119
+msgid "Email Subject"
+msgstr "Email Subject"
+
+#: .\templates\contact.html:120
+msgid "Your Message"
+msgstr "Your Message"
+
+#: .\templates\contact.html:123
+msgid "Send Message"
+msgstr "Send Message"
+
+#: .\templates\index.html:69
+msgid "Backend Developer"
+msgstr "Backend Developer"
+
+#: .\templates\index.html:72
+msgid "Full Stack Developer"
+msgstr "Full Stack Developer"
+
+#: .\templates\index.html:75
+msgid "Python Developer"
+msgstr "Python Developer"
+
+#: .\templates\index.html:78
+msgid "Middle Developer"
+msgstr "Middle Developer"
+
+#: .\templates\index.html:87
+msgid "Downoad CV"
+msgstr "Download CV"
+
+#: .\templates\portfolio.html:65
+msgid "Latest"
+msgstr "Latest"
+
+#: .\templates\portfolio.html:67
+msgid "Project"
+msgstr "Project"
+
+#: .\templates\portfolio.html:92 .\templates\portfolio.html:124
+msgid "Live Project"
+msgstr "Live Project"
+
+#: .\templates\portfolio.html:98 .\templates\portfolio.html:130
+msgid "GitHub Repository"
+msgstr "GitHub Repository"
+
+#: .\templates\resume.html:67
+msgid "Why Hire Me?"
+msgstr "Why Hire Me?"
+
+#: .\templates\resume.html:70
+msgid "Information about my work, studies, and skills."
+msgstr "Information about my work, studies, and skills."
+
+#: .\templates\resume.html:73
+msgid "Experience"
+msgstr "Experience"
+
+#: .\templates\resume.html:76
+msgid "Education"
+msgstr "Education"
+
+#: .\templates\resume.html:79
+msgid "Skills"
+msgstr "Skills"
+
+#: .\templates\resume.html:82
+msgid "About Me"
+msgstr "About Me"
+
+#: .\templates\resume.html:89 .\templates\resume.html:121
+#: .\templates\resume.html:153 .\templates\services.html:64
+msgid "My"
+msgstr "My"
+
+#: .\templates\resume.html:179
+msgid "Me"
+msgstr "Me"

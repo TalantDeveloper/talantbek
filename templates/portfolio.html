@@ -25,9 +25,8 @@
         <a href="{% url 'main:resume' %}">{% trans "Resume" %}</a>
         <a href="{% url 'main:portfolio' %}" class="active">{% trans "Portfolio" %}</a>
         <a href="{% url 'main:contact' %}">{% trans "Contact" %}</a>
-
-
     </nav>
+    
     <div class="dropdowns">
         <span id="lang">
             <img src="{{ language.base_img.url }}" alt="" width="30">
@@ -61,16 +60,49 @@
 </div>
 
 <section class="portfolio active">
+    
     <h2 class="heading">
         {% trans "Latest" %}
         <span>
             {% trans "Project" %}
         </span>
     </h2>
+
     <div class="portfolio-container">
-        {% for project in projects %}
-            <div class="portfolio-box">
-                <div class="portfolio-detail active">
+        <div class="portfolio-box">
+            <div class="portfolio-detail active">
+                <p class="numb">
+                    {{ project_first.pro_id }}
+                </p>
+                <h3>
+                    {{ project_first.name }}
+                </h3>
+                <p>
+                    {{ project_first.content }}
+                </p>
+                <div class="tech">
+                    <p>
+                        {{ project_first.technology }}
+                    </p>
+                </div>
+                <div class="live-github">
+                    <a href="{{ project_first.live_link }}">
+                        <i class="bx bx-arrow-back"></i>
+                        <span>
+                            {% trans "Live Project" %}
+                        </span>
+                    </a>
+                    <a href="{{ project_first.github_link }}">
+                        <i class="bx bxl-github"></i>
+                        <span>
+                            {% trans "GitHub Repository" %}
+                        </span>
+                    </a>
+                </div>
+            </div>
+        
+            {% for project in projects_check %}
+                <div class="portfolio-detail">
                     <p class="numb">
                         {{ project.pro_id }}
                     </p>
@@ -100,28 +132,33 @@
                         </a>
                     </div>
                 </div>
-            </div>
-            
-
-            <div class="portfolio-box">
-                <div class="portfolio-carousel">
-                    <div class="img-slide">
+            {% endfor %}
+        
+        </div>
+    
+        <div class="portfolio-box">
+            <div class="portfolio-carousel">
+                <div class="img-slide">
+                    
+                    {% for project in projects %}
                         <div class="img-item">
                             <img src="{{ project.image.url }}" alt="">
                         </div>
-                    </div>
-                </div>
-                <div class="navigation">
-                    <button class="arrow-left disabled">
-                        <i class="bx bx-chevron-left"></i>
-                    </button>
-                    <button class="arrow-right">
-                        <i class="bx bx-chevron-right"></i>
-                    </button>
+                    {% endfor %}
+                
                 </div>
             </div>
-        {% endfor %}
-
+            
+            <div class="navigation">
+                <button class="arrow-left disabled">
+                    <i class="bx bx-chevron-left"></i>
+                </button>
+                <button class="arrow-right">
+                    <i class="bx bx-chevron-right"></i>
+                </button>
+            </div>
+        
+        </div>
     </div>
 </section>
 

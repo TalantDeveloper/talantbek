@@ -16,9 +16,8 @@
 
 <header class="active">
     <a href="{% url 'main:welcome' %}" class="logo">{% trans "TalantDev" %}</a>
-
     <i class="bx bx-menu" id="menu-icon"></i>
-
+    
     <nav>
         <a href="{% url 'main:welcome' %}">{% trans "Home" %}</a>
         <a href="{% url 'main:services' %}">{% trans "Services" %}</a>
@@ -26,6 +25,7 @@
         <a href="{% url 'main:portfolio' %}">{% trans "Portfolio" %}</a>
         <a href="{% url 'main:contact' %}" class="active">{% trans "Contact" %}</a>
     </nav>
+    
     <div class="dropdowns">
         <span id="lang">
             <img src="{{ language.base_img.url }}" alt="" width="30">
@@ -49,6 +49,7 @@
 
 </header>
 
+
 <div class="bars-box active">
     <div class="bar" style="--i:6;"></div>
     <div class="bar" style="--i:5;"></div>
@@ -58,14 +59,16 @@
     <div class="bar" style="--i:1;"></div>
 </div>
 
+
 <section class="contact active">
     <div class="contact-container">
         <div class="contact-box">
+            
             <h2>
                 {% trans "Let's Work Together" %}
             </h2>
             <p class="desc">
-                {% trans "Lorem ipsum dolor sit amet, consectetur adipisicing elit. A accusantium animi architecto assumenda delectus doloribus, earum impedit magnam numquam quidem." %}
+                {% trans "Contact me, I can contribute to the development of your company in many areas." %}
             </p>
             <div class="contact-detail">
                 <i class="bx bxs-phone"></i>
@@ -82,7 +85,9 @@
                     <p>
                         {% trans "Email" %}
                     </p>
-                    <p>ergashovbotirjon4@gmail.com</p>
+                    <p>
+                        ergashovbotirjon4@gmail.com
+                    </p>
                 </div>
             </div>
             <div class="contact-detail">
@@ -97,14 +102,17 @@
                 </div>
             </div>
         </div>
+        
         <div class="contact-box">
-            <form action="">
+            <form action="{% url 'main:contact' %}" method="post">
+                {% csrf_token %}
                 <h2 class="heading">
                     {% trans "Contect" %}
                     <span>
                         {% trans "Me!" %}
                     </span>
                 </h2>
+                
                 <div class="field-box">
                     <input type="text" placeholder="{% trans 'Full Name' %}" required>
                     <input type="text" placeholder="{% trans 'Email Address' %}" required>

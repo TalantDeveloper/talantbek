@@ -26,6 +26,7 @@
         <a href="{% url 'main:portfolio' %}">{% trans "Portfolio" %}</a>
         <a href="{% url 'main:contact' %}">{% trans "Contact" %}</a>
     </nav>
+    
     <div class="dropdowns">
         <span id="lang">
             <img src="{{ language.base_img.url }}" alt="" width="30">
@@ -60,6 +61,7 @@
 
 <section class="resume active">
     <div class="resume-container">
+        
         <div class="resume-box">
             <h2>
                 {% trans 'Why Hire Me?' %}
@@ -80,6 +82,7 @@
                 {% trans "About Me" %}
             </button>
         </div>
+    
         <div class="resume-box">
             <div class="resume-detail experience active">
                 <h2 class="heading">
@@ -109,6 +112,7 @@
                             </p>
                         </div>
                     {% endfor %}
+                
                 </div>
             </div>
 
@@ -123,6 +127,7 @@
                     {{ education.content }}
                 </p>
                 <div class="resume-list">
+                
                     {% for educat in educations %}
                         <div class="resume-item">
                             <p class="year">
@@ -139,6 +144,7 @@
                             </p>
                         </div>
                     {% endfor %}
+                
                 </div>
             </div>
 
@@ -153,6 +159,7 @@
                     {{ skill.content }}
                 </p>
                 <div class="resume-list">
+                
                     {% for skil in skills %}
                         <div class="resume-item">
                             <i class='{{ skil.icon_class }}'></i>
@@ -176,6 +183,7 @@
                     {{ about_me.content }}
                 </p>
                 <div class="resume-list">
+                
                     {% for aboutme in abouts_me %}
                         <div class="resume-item">
                             <p>
@@ -186,6 +194,7 @@
                             </p>
                         </div>
                     {% endfor %}
+                
                 </div>
             </div>
 

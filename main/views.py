@@ -1,5 +1,5 @@
-from django.shortcuts import render
-from .models import About, Science, Service, Page, Card, Skill, AboutMe, Project, Language
+from django.shortcuts import render, redirect
+from .models import About, Science, Service, Page, Card, Skill, AboutMe, Project, Language, SectionPage
 from .function import get_languages
 
 
@@ -48,9 +48,13 @@ def resume(request):
 
 
 def portfolio(request):
+    project_first = Project.objects.first()
     projects = Project.objects.all()
+    projects_check = projects[1:]
     language = get_languages()
     context = {
+        'project_first': project_first,
+        'projects_check': projects_check,
         'projects': projects,
         'language': language,
     }
@@ -58,6 +62,8 @@ def portfolio(request):
 
 
 def contact(request):
+    if request.method == 'POST':
+        return redirect('main:welcome')
     language = get_languages()
     context = {
         'language': language,
@@ -65,9 +71,11 @@ def contact(request):
     return render(request, 'contact.html', context)
 
 
-def page_views(request):
+def page_views(request, pk):
+    section_page = SectionPage.objects.get(id=pk)
     language = get_languages()
     context = {
         'language': language,
+        'section_page': section_page,
     }
     return render(request, 'page.html', context)

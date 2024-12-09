@@ -16,7 +16,6 @@
 
 <header class="active">
     <a href="{% url 'main:welcome' %}" class="logo">{% trans "TalantDev" %}</a>
-
     <i class="bx bx-menu" id="menu-icon"></i>
 
     <nav>
@@ -26,6 +25,7 @@
         <a href="{% url 'main:portfolio' %}">{% trans "Portfolio" %}</a>
         <a href="{% url 'main:contact' %}">{% trans "Contact" %}</a>
     </nav>
+    
     <div class="dropdowns">
         <span id="lang">
             <img src="{{ language.base_img.url }}" alt="" width="30">
@@ -63,6 +63,7 @@
         <h1>
             {{ about.full_name }}
         </h1>
+        
         <h2>
             <span style="--i:4" data-text="Backend Developer">
                 {% trans "Backend Developer" %}
@@ -77,6 +78,7 @@
                 {% trans "Middle Developer" %}
             </span>
         </h2>
+        
         <p>
             {{ about.content|safe }}
         </p>
@@ -84,6 +86,7 @@
             <a href="{{ about.cv_file.url }}" class="btn">
                 {% trans "Downoad CV" %}
             </a>
+            
             <div class="sci">
                 <a href="https://github.com/TalantDeveloper">
                     <i class='bx bxl-github'></i>
@@ -101,6 +104,7 @@
                     <i class='bx bxl-instagram'></i>
                 </a>
             </div>
+            
         </div>
     </div>
 
@@ -111,6 +115,7 @@
             </div>
         </div>
     </div>
+    
 </section>
 
 <script src="{% static 'js/script.js' %}"></script>
