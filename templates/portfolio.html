@@ -26,7 +26,7 @@
         <a href="{% url 'main:portfolio' %}" class="active">{% trans "Portfolio" %}</a>
         <a href="{% url 'main:contact' %}">{% trans "Contact" %}</a>
     </nav>
-    
+
     <div class="dropdowns">
         <span id="lang">
             <img src="{{ language.base_img.url }}" alt="" width="30">
@@ -60,7 +60,7 @@
 </div>
 
 <section class="portfolio active">
-    
+
     <h2 class="heading">
         {% trans "Latest" %}
         <span>
@@ -100,7 +100,7 @@
                     </a>
                 </div>
             </div>
-        
+
             {% for project in projects_check %}
                 <div class="portfolio-detail">
                     <p class="numb">
@@ -133,22 +133,22 @@
                     </div>
                 </div>
             {% endfor %}
-        
+
         </div>
-    
+
         <div class="portfolio-box">
             <div class="portfolio-carousel">
                 <div class="img-slide">
-                    
+
                     {% for project in projects %}
                         <div class="img-item">
                             <img src="{{ project.image.url }}" alt="">
                         </div>
                     {% endfor %}
-                
+
                 </div>
             </div>
-            
+
             <div class="navigation">
                 <button class="arrow-left disabled">
                     <i class="bx bx-chevron-left"></i>
@@ -157,11 +157,17 @@
                     <i class="bx bx-chevron-right"></i>
                 </button>
             </div>
-        
+
         </div>
     </div>
 </section>
-
 <script src="{% static 'js/script.js' %}"></script>
+<script src="https://unpkg.com/magic-snowflakes/dist/snowflakes.min.js"></script>
+<script>
+    var sf = new Snowflakes({
+        color: "#46cbec",
+        speed: 3
+    });
+</script>
 </body>
 </html>
