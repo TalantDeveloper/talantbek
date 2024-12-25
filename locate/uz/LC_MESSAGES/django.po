@@ -195,4 +195,4 @@ msgstr "Mening"
 
 #: .\templates\resume.html:179
 msgid "Me"
-msgstr ""
+msgstr " "
