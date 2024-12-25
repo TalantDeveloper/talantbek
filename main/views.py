@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from .models import About, Science, Service, Page, Card, Skill, AboutMe, Project, Language, SectionPage
 from .function import get_languages
 
@@ -72,10 +72,13 @@ def contact(request):
 
 
 def page_views(request, pk):
-    section_page = SectionPage.objects.get(id=pk)
+    try:
+        page = SectionPage.objects.get(pk=pk)
+    except SectionPage.DoesNotExist:
+        return redirect('main:welcome')
     language = get_languages()
     context = {
         'language': language,
-        'section_page': section_page,
+        'page': page,
     }
     return render(request, 'page.html', context)

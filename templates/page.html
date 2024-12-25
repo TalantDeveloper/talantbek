@@ -61,14 +61,12 @@
 <section class="service active">
     <h2 class="heading">
         <span>
-            {% trans "Services" %}
+            {{ page.name }}
         </span>
     </h2>
     <div class="home-detail">
         <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. A at atque cumque dolorum eos harum molestias non
-            pariatur, provident quae quisquam rem repellat repudiandae rerum soluta ullauisquam rem repellat repudiandae
-            rerum soluta ullam unde vitae, voluptatem.
+            {{ page.content|safe }}
         </p>
     </div>
 </section>
