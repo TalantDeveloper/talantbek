@@ -102,7 +102,7 @@ msgstr "Aloqa"
 
 #: .\templates\contact.html:111
 msgid "Me!"
-msgstr "Men!"
+msgstr "!"
 
 #: .\templates\contact.html:116
 msgid "Full Name"
