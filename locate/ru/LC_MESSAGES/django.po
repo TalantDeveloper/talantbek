@@ -199,4 +199,4 @@ msgstr "Мой"
 
 #: .\templates\resume.html:179
 msgid "Me"
-msgstr "Я"
+msgstr " "
