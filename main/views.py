@@ -82,3 +82,7 @@ def page_views(request, pk):
         'page': page,
     }
     return render(request, 'page.html', context)
+
+
+def not_fount(reqeust, name):
+    return render(reqeust, 'notFound.html', {'name': name})

@@ -10,4 +10,5 @@ urlpatterns = [
     path('portfolio/', views.portfolio, name='portfolio'),
     path('contact/', views.contact, name='contact'),
     path('page/<int:pk>/', views.page_views, name='page'),
+    path('<str:name>/', views.not_fount, name='not_found'),
 ]
