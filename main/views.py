@@ -1,6 +1,8 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from .models import About, Science, Service, Page, Card, Skill, AboutMe, Project, Language, SectionPage
 from .function import get_languages
+from django.core.mail import send_mail
+from django.http import HttpResponse
 
 
 def welcome(request):
@@ -86,3 +88,17 @@ def page_views(request, pk):
 
 def not_fount(reqeust, name):
     return render(reqeust, 'notFound.html', {'name': name})
+
+
+def send_email(request):
+    try:
+        send_mail(
+            "Testing message",
+            "Here is the message. go go go ",
+            "mutafakkirjurnal@gmail.com",
+            ["ergashevm922@gmail.com"],
+            fail_silently=False,
+        )
+        return HttpResponse('Email sent successfully!')
+    except Exception as e:
+        return HttpResponse(f'Error sending email: {str(e)}')
